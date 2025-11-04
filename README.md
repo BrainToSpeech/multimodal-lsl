@@ -6,6 +6,7 @@ Minimal examples for streaming **microphone** and **webcam** to **Lab Streaming 
 .  
 ├─ mic_to_lsl.py         # Microphone → LSL (Audio)  
 ├─ webcam_to_lsl.py      # Webcam → LSL (Video)  
+├─ paradigm_session_marker.py  # Marker → LSL
 ├─ read_xdf_check.py     # Quick sanity check for XDF files  
 └─ requirements.txt      # Dependencies  
 
