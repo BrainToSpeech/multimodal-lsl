@@ -23,18 +23,24 @@ When recording with **LabRecorder**, you’ll typically see:
 BCI_Markers (Markers), Webcam_External (Video), Microphone (Audio)
 
 ## Installation
+```bash
 python -m venv .venv
+```
 pip install -r requirements.txt
 
 ## Usage
 
 ### 1) Stream microphone to LSL
+```bash
 python mic_to_lsl.py
+```
 - Logs device info and sampling rate.  
 - Stream name: `Microphone`, type: `Audio`.
 
 ### 2) Stream webcam to LSL
+```bash
 python webcam_to_lsl.py
+```
 - Sends frames from the default camera.  
 - Stream name: `Webcam_External`, type: `Video`.
 
@@ -45,7 +51,6 @@ python webcam_to_lsl.py
 2. Click **Start** to record → **Stop** to save `*.xdf`
 
 ### 4) Inspect the recorded XDF
-**Command**
 ```bash
 python read_xdf_check.py path/to/recording.xdf
 ```
