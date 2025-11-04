@@ -22,14 +22,7 @@ When recording with **LabRecorder**, you’ll typically see:
 BCI_Markers (Markers), Webcam_External (Video), Microphone (Audio)
 
 ## Installation
-# Create & activate a virtual env (recommended)
 python -m venv .venv
-# Windows
-.\.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
 
 ## Usage
