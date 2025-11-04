@@ -45,8 +45,12 @@ python webcam_to_lsl.py
 2. Click **Start** to record → **Stop** to save `*.xdf`
 
 ### 4) Inspect the recorded XDF
+**Command**
+```bash
 python read_xdf_check.py path/to/recording.xdf
+```
 Example output:
+```bash
 Stream 0: BCI_Markers (Markers)  
 samples: 9  
 channels: 1  
@@ -56,3 +60,4 @@ channels: 1
 Stream 2: Microphone (Audio)  
 samples: 3131379  
 channels: 1  
+```
