@@ -26,7 +26,7 @@ BCI_Markers (Markers), Webcam_External (Video), Microphone (Audio)
 ```bash
 python -m venv .venv
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt 
 
 ## Usage
 
