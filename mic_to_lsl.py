@@ -21,7 +21,7 @@ def main(dev=1, fs=44100, ch=1, block=256, name="Microphone", source_id=None):
         ts = local_clock()
         if ch == 1:
             for v in indata[:, 0]:
-                outlet.push_sample([float(v)], ts)
+                outlet.push_sample([float(v)], ts) 
                 ts += 1.0/fs 
         else:
             for row in indata:
