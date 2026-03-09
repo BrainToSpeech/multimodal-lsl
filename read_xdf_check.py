@@ -16,7 +16,7 @@ for idx, stream in enumerate(data):
         print("  channels:", len(ts[0]))
     else:
         print("  channels: 0")
-
+ 
 # ------------------ Check EEG data by plotting 
 eeg_stream = [s for s in data if s['info']['type'][0] == 'EEG'][0]
 
