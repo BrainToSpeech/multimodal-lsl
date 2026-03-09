@@ -16,7 +16,7 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
                       nominal_srate=fps, channel_format='string', source_id=source_id)
     outlet = StreamOutlet(info, chunk_size=1, max_buffered=360)
 
-    print(f"[LSL] Video stream started → name='{name}', type='Video', fps={fps}, size={width}x{height}")
+    print(f"[LSL] Video stream started → name='{name}', type='Video', fps={fps}, size={width}x{height}") 
     print("종료: 창 포커스에서 'q' 키")
 
     # 송출 루프
