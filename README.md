@@ -27,7 +27,7 @@ BCI_Markers (Markers), Webcam_External (Video), Microphone (Audio)
 python -m venv .venv
 ```
 pip install -r requirements.txt 
-
+ 
 ## Usage
 
 ### 1) Stream microphone to LSL
