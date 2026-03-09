@@ -15,7 +15,7 @@ CUE_SEC      = 2.0
 ACTION_SEC   = 2.0
 REST_SEC     = 2.0 
 
-FONT_NAME    = r"C:\Windows\Fonts\malgun.ttf"
+FONT_NAME    = r"C:\Windows\Fonts\malgun.ttf" 
 FONT_SIZE    = 72
 BG           = (0, 0, 0)
 FG           = (255, 255, 255)
@@ -23,7 +23,7 @@ FG           = (255, 255, 255)
 # ===== LSL 이벤트 코드 =====
 event_id_map = {
     "READY":  0,
-    "CUE":    11,
+    "CUE":    11, 
     "ACTION": 12,
     "REST":   13,
     "END":    99,
@@ -36,7 +36,7 @@ def draw_text(screen, text, font, color=FG):
     rect = surf.get_rect(center=(screen.get_width()//2, screen.get_height()//2))
     screen.blit(surf, rect)
     pygame.display.flip()
-
+ 
 def wait_fixed(seconds, clock, draw_frame):
     t0 = time.perf_counter()
     while time.perf_counter() - t0 < seconds:
