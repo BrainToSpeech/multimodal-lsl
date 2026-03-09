@@ -32,7 +32,7 @@ def main(dev=1, fs=44100, ch=1, block=256, name="Microphone", source_id=None):
     with sd.InputStream(device=dev, samplerate=fs, channels=ch, dtype="float32",
                         blocksize=block, callback=cb):
         try:
-            print("streaming... Ctrl+C to stop")
+            print("streaming... Ctrl+C to stop") 
             while True:
                 sd.sleep(1000)
         except KeyboardInterrupt:
