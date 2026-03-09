@@ -16,7 +16,7 @@ Minimal examples for streaming **microphone** and **webcam** to **Lab Streaming 
   `type="Audio"`, `channel_count=1` (sampling rate depends on OS/device)
 - **Webcam_External**  
   `type="Video"`, `channel_count=1` (frame rate depends on device/codec)
-- **BCI_Markers** *(optional, from a paradigm app)*  
+- **BCI_Markers** *(optional, from a paradigm app)*   
   `type="Markers"`, single string channel (codes sent as strings)
  
 When recording with **LabRecorder**, you’ll typically see:  
