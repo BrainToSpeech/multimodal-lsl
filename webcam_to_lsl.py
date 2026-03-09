@@ -23,7 +23,7 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
     t_frame = time.time() 
     interval = 1.0 / max(1, fps)
     while True: 
-        ok, frame = cap.read()
+        ok, frame = cap.read() 
         if not ok: 
             print("프레임을 읽지 못했습니다. 계속 시도합니다...")
             time.sleep(0.01)
