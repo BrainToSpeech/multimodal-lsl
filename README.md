@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ## Usage
 
 ### 1) Stream microphone to LSL
-```bash
+```bash 
 python mic_to_lsl.py
 ```
 - Logs device info and sampling rate.  
