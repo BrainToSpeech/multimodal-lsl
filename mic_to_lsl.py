@@ -40,7 +40,7 @@ def main(dev=1, fs=44100, ch=1, block=256, name="Microphone", source_id=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--device", type=int, default=1)
+    ap.add_argument("--device", type=int, default=1) 
     ap.add_argument("--samplerate", type=int, default=44100)
     ap.add_argument("--channels", type=int, default=1)
     ap.add_argument("--blocksize", type=int, default=256)
