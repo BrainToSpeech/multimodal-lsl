@@ -17,27 +17,27 @@ for idx, stream in enumerate(data):
     else:
         print("  channels: 0")
 
-# ------------------ Check EEG data by plotting
+# ------------------ Check EEG data by plotting 
 eeg_stream = [s for s in data if s['info']['type'][0] == 'EEG'][0]
 
 eeg_data = eeg_stream['time_series'].T
-print(eeg_data.shape)
+print(eeg_data.shape) 
 eeg_data_0 = eeg_data[0]
 plt.plot(eeg_data_0[:30])
 plt.show()
 
-# ------------------ Check video data by reconsting into image
+# ------------------ Check video data by reconsting into image 
 video_stream = [s for s in data if s['info']['type'][0] == 'Video'][0]
 
 sample0 = video_stream['time_series'][0]
 frame_str = sample0[0] if isinstance(sample0, (list, tuple)) else sample0
-
+ 
 def _decode_bytes(s: str) -> bytes: # 1) 문자열 → 바이너리 복원 (base64 우선, 실패 시 hex로 시도)
     try:
         return base64.b64decode(s, validate=True)
     except Exception:
         return bytes.fromhex(s)
-
+ 
 buf = _decode_bytes(frame_str)
 
 arr = np.frombuffer(buf, dtype=np.uint8) # 2) 바이트 → numpy → OpenCV 이미지

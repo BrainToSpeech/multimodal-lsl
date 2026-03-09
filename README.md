@@ -8,9 +8,9 @@ Minimal examples for streaming **microphone** and **webcam** to **Lab Streaming 
 ├─ webcam_to_lsl.py      # Webcam → LSL (Video)  
 ├─ paradigm_session_marker.py  # Marker → LSL  
 ├─ read_xdf_check.py     # Quick sanity check for XDF files  
-└─ requirements.txt      # Dependencies  
+└─ requirements.txt      # Dependencies    
 
-## Stream Specs (Defaults)
+## Stream Specs (Defaults) 
 
 - **Microphone**  
   `type="Audio"`, `channel_count=1` (sampling rate depends on OS/device)
@@ -18,7 +18,7 @@ Minimal examples for streaming **microphone** and **webcam** to **Lab Streaming 
   `type="Video"`, `channel_count=1` (frame rate depends on device/codec)
 - **BCI_Markers** *(optional, from a paradigm app)*  
   `type="Markers"`, single string channel (codes sent as strings)
-
+ 
 When recording with **LabRecorder**, you’ll typically see:  
 BCI_Markers (Markers), Webcam_External (Video), Microphone (Audio)
 

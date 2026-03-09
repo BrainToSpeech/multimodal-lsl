@@ -7,7 +7,7 @@ def main(dev=1, fs=44100, ch=1, block=256, name="Microphone", source_id=None):
     sd.query_devices() 
 
     if source_id is None:
-        source_id = f"mic_{int(time.time())}" 
+        source_id = f"mic_{int(time.time())}"  
 
     info = StreamInfo(name, "Audio", ch, fs, "float32", source_id)
     outlet = StreamOutlet(info)  # 안정성↑: chunk_size 지정 안 함

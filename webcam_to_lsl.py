@@ -24,10 +24,10 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
     interval = 1.0 / max(1, fps)
     while True:
         ok, frame = cap.read()
-        if not ok:
+        if not ok: 
             print("프레임을 읽지 못했습니다. 계속 시도합니다...")
             time.sleep(0.01)
-            continue
+            continue 
 
         # JPEG 압축 (품질 80 정도)
         ok, buf = cv2.imencode(".jpg", frame, [int(cv2.IMWRITE_JPEG_QUALITY), 80])
@@ -37,11 +37,11 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
         # Base64로 문자열화 → LSL string 채널에 태움
         b64 = base64.b64encode(buf.tobytes()).decode('ascii')
         outlet.push_sample([b64], timestamp=local_clock())
-
-        # 미리보기(옵션)
+ 
+        # 미리보기(옵션) 
         cv2.imshow("Webcam Preview (LSL out)", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+            break 
 
         # FPS 간격 맞추기(간단한 슬립)
         t_frame += interval
