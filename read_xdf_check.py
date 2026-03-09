@@ -4,7 +4,7 @@ import base64, numpy as np, cv2
 import sounddevice as sd
 
 data, header = pyxdf.load_xdf("C:/Users/SeungHanKim/Documents/CurrentStudy/20251027_001.xdf")
-
+ 
 print("Number of streams:", len(data))
 for idx, stream in enumerate(data):
     name = stream['info']['name'][0]
@@ -12,7 +12,7 @@ for idx, stream in enumerate(data):
     ts = stream['time_series']
     print(f"Stream {idx}: {name} ({stype})")
     print("  samples:", len(ts))
-    if len(ts) > 0:
+    if len(ts) > 0: 
         print("  channels:", len(ts[0]))
     else:
         print("  channels: 0")

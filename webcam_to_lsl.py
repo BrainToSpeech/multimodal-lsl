@@ -6,7 +6,7 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
     cap = cv2.VideoCapture(cam_index, cv2.CAP_DSHOW)  # Windows에선 CAP_DSHOW가 카메라 선택 안정적
     cap.set(cv2.CAP_PROP_FRAME_WIDTH,  width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-    cap.set(cv2.CAP_PROP_FPS,          fps)
+    cap.set(cv2.CAP_PROP_FPS,          fps) 
 
     if not cap.isOpened():
         raise RuntimeError(f"카메라를 열 수 없습니다 (index={cam_index}). 다른 인덱스를 시도해보세요.")
@@ -20,7 +20,7 @@ def main(cam_index=0, width=640, height=480, fps=30, name='Webcam', source_id='w
     print("종료: 창 포커스에서 'q' 키")
 
     # 송출 루프
-    t_frame = time.time()
+    t_frame = time.time() 
     interval = 1.0 / max(1, fps)
     while True:
         ok, frame = cap.read()

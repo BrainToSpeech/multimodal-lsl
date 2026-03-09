@@ -4,13 +4,13 @@
 import os, time, pygame
 from pygame.locals import *
 from pylsl import StreamInfo, StreamOutlet, local_clock
-
+ 
 # ===== 설정 =====
 FULLSCREEN   = False
 WIN_SIZE     = (1920, 1080)
 FPS          = 60
 
-N_TRIALS     = 1        # 반복 횟수 (원하면 변경)
+N_TRIALS     = 1        # 반복 횟수 (원하면 변경) 
 CUE_SEC      = 2.0
 ACTION_SEC   = 2.0
 REST_SEC     = 2.0
