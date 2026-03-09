@@ -32,7 +32,7 @@ video_stream = [s for s in data if s['info']['type'][0] == 'Video'][0]
 sample0 = video_stream['time_series'][0]
 frame_str = sample0[0] if isinstance(sample0, (list, tuple)) else sample0
  
-def _decode_bytes(s: str) -> bytes: # 1) 문자열 → 바이너리 복원 (base64 우선, 실패 시 hex로 시도)
+def _decode_bytes(s: str) -> bytes: # 1) 문자열 → 바이너리 복원 (base64 우선, 실패 시 hex로 시도) 
     try:
         return base64.b64decode(s, validate=True)
     except Exception:
