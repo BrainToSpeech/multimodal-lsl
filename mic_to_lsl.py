@@ -38,7 +38,7 @@ def main(dev=1, fs=44100, ch=1, block=256, name="Microphone", source_id=None):
         except KeyboardInterrupt:
             print("\n[STOP]")
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     ap = argparse.ArgumentParser()
     ap.add_argument("--device", type=int, default=1) 
     ap.add_argument("--samplerate", type=int, default=44100)
